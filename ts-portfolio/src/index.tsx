@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import GlobalStytle from './assets/styles/GlobalStyle';
 import reportWebVitals from './reportWebVitals';
@@ -9,8 +10,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <GlobalStytle />
-    <App />
+    <BrowserRouter>
+      <GlobalStytle />
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );
 

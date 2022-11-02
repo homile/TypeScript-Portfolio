@@ -2,35 +2,36 @@ import { DefaultTheme } from 'styled-components';
 
 export const theme: DefaultTheme = {
   /* Color */
-  '--color-white': '#ffffff',
-  '--color-light-white': '#eeeeee',
-  '--color-dark-white': '#bdbdbd',
-  '--color-pink': '#fe918d',
-  '--color-dark-pink': '#ff6863',
-  '--color-dark-grey': '#4d4d4d',
-  '--color-grey': '#616161',
-  '--color-light-grey': '#7c7979',
-  '--color-blue': '#73aace',
-  '--color-yellow': '#fff7d1',
-  '--color-orange': '#feb546',
-  '--color-black': '#000000',
-  '--color-light-blue': '#41BBF2',
+  colorWhite: '#ffffff',
+  colorLightWhite: '#eeeeee',
+  colorDarkWhite: '#bdbdbd',
+  colorPink: '#fe918d',
+  colorDarkPink: '#ff6863',
+  colorDarkGrey: '#4d4d4d',
+  colorGrey: '#616161',
+  colorLightGrey: '#7c7979',
+  colorBlue: '#73aace',
+  colorYellow: '#fff7d1',
+  colorOrange: '#feb546',
+  colorBlack: '#000000',
+  colorLightBlue: '#41BBF2',
+  colorMain: '#40bbf2',
 
   /* Font size */
-  '--font-large': '48px',
-  '--font-medium': '28px',
-  '--font-regular': '18px',
-  '--font-small': '16px',
-  '--font-micro': '14px',
+  fontLarge: '48px',
+  fontMedium: '28px',
+  fontRegular: '18px',
+  fontSmall: '16px',
+  fontMicro: '14px',
 
   /* Font weight */
-  '--weight-bold': '700',
-  '--weight-semi-bold': '600',
-  '--weight-regular': '400',
+  weightBold: '700',
+  weightSemiBold: '600',
+  weightRegular: '400',
 
   /* Size */
-  '--size-border-radius': '4px',
+  sizeBorderRadius: '4px',
 
   /* Animation */
-  '--animation-duration': '300ms',
+  animationDuration: '300ms',
 };

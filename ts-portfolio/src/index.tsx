@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import App from './App';
 import GlobalStytle from './assets/styles/GlobalStyle';
 import reportWebVitals from './reportWebVitals';
+import { theme } from './assets/styles/Theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -11,8 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <GlobalStytle />
-      <App />
+      <ThemeProvider theme={theme}>
+        <GlobalStytle />
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

@@ -65,6 +65,18 @@ const GlobalStytle = createGlobalStyle`
     color: var(--color-black);
     margin: 4px 0;  
   }
+
+  .section{
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+    scroll-margin: 40px;
+  }
+
+  .section_container{
+    max-width: 1200px;
+    margin: auto;
+  }
 `;
 
 export default GlobalStytle;

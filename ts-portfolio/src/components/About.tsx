@@ -129,10 +129,10 @@ const JobDescription = styled.div`
 
 const JobName = styled.p`
   font-size: ${(props) => props.theme.fontSmall};
-  color: ${(props) => props.theme.colorLogthGray};
+  color: ${(props) => props.theme.colorLightGray};
 `;
 
 const JobPeriod = styled.p`
   font-size: ${(props) => props.theme.fontMicro};
-  color: ${(props) => props.theme.colorLogthGray};
+  color: ${(props) => props.theme.colorLightGray};
 `;

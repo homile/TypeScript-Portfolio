@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <NavbarStlye>
       <NavbarLogo>
-        <Img src={logo} alt="logo" />
+        {/* <Img src={logo} alt="logo" /> */}
         <Link to="#">Minwoo</Link>
       </NavbarLogo>
       <UlNavbarMenu>

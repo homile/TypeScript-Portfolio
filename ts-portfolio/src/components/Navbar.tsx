@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../assets/img/favicon.png';
 
 const Navbar = () => {
   return (
     <NavbarStlye>
       <NavbarLogo>
-        {/* <Img src={logo} alt="logo" /> */}
         <Link to="#">Minwoo</Link>
       </NavbarLogo>
       <UlNavbarMenu>

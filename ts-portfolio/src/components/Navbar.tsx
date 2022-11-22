@@ -19,10 +19,7 @@ const Navbar = () => {
           Skills
         </li>
         <li className="navbar_menu_item" data-link="#work">
-          My work
-        </li>
-        <li className="navbar_menu_item" data-link="#testimonials">
-          Testimonial
+          Projects
         </li>
         <li className="navbar_menu_item" data-link="#contact">
           Contact

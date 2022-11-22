@@ -1,8 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import profilePhoto from '../assets/img/minwoo.jpg';
+import SnsLink from './button/SnsLink';
 
 const Home = () => {
+  const [snsList, setSnsList] = useState([
+    { title: 'Blog', color: '#EA5220', img: '' },
+    { title: 'Github', color: '#000000', img: '' },
+  ]);
+
   return (
     <HomeSection>
       <HomeContainer>

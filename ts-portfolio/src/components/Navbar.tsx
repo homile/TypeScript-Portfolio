@@ -53,11 +53,6 @@ const NavbarLogo = styled.div`
   font-weight: ${(props) => props.theme.weightSemiBold};
 `;
 
-const Img = styled.img`
-  height: 20px;
-  width: 20px;
-`;
-
 const UlNavbarMenu = styled.div`
   display: flex;
 

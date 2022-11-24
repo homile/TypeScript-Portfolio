@@ -95,12 +95,20 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 2rem 0;
+  margin: 1rem 0;
 `;
 
 const CardContent = styled.div`
   display: flex;
-  width: 54.375rem;
+  width: 55.375rem;
+  padding: 1rem;
+
+  &:hover {
+    transition: all 0.5s linear;
+    transform: scale(1.1);
+    border: 1px solid ${(props) => props.theme.colorLightBlue};
+    border-radius: ${(props) => props.theme.sizeBorderRadius};
+  }
 `;
 
 const ImgDiv = styled.div`

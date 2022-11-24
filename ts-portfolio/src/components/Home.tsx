@@ -50,7 +50,7 @@ const HomeSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 40px;
   padding-top: 120px;
   text-align: center;

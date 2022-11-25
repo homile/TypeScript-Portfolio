@@ -10,7 +10,11 @@ const SkillFilter = () => {
     <FilterContainer>
       {filter.map((el, idx: number) => {
         return (
-          <FilterButton key={idx} selected={select === el}>
+          <FilterButton
+            key={idx}
+            selected={select === el}
+            onClick={() => setSelect(el)}
+          >
             {el}
           </FilterButton>
         );

@@ -147,4 +147,6 @@ const Li = styled.li`
   list-style-position: inside;
   font-size: ${(props) => props.theme.fontSmall};
   margin: 0.2rem 0;
+  text-indent: -20px;
+  padding-left: 20px;
 `;

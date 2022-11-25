@@ -1,21 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
+import SnsLink from './button/SnsLink';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="section">
-      <h1 className="contact_title">Let's talk</h1>
-      <h2 className="contact_email">ssanho2@naver.com</h2>
-      <div className="contact_links">
-        <a href="https://github.com/homile" target="_blank">
-          <i className="fab fa-github"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i className="fa fa-linkedinsquare"></i>
-        </a>
-      </div>
-      <p className="contact_rights">2022 Minwoo - All rights reserved</p>
-    </footer>
+    <FooterSection>
+      <SnsLink></SnsLink>
+      <StyledP>© 2022. Cho Min Woo. All rights reserved.</StyledP>
+    </FooterSection>
   );
 };
 
 export default Footer;
+
+const FooterSection = styled.footer`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  background: ${(props) => props.theme.colorDarkWhite};
+  padding: 1rem 0;
+`;
+
+const StyledP = styled.p`
+  padding-top: 1rem;
+  font-weight: ${(props) => props.theme.weightSemiBold};
+`;

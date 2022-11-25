@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { communitySite, portfolio_site } from '../assets/img/projects/index';
+import Title from './ui/Title';
 
 interface projectsArr {
   mode: string;
@@ -29,11 +30,22 @@ const Projects = () => {
   ];
 
   return (
-    <WorkSection className="section">
+    <WorkSection>
+      <Title title="Projects" />
     </WorkSection>
   );
 };
 
 export default Projects;
 
-const WorkSection = styled.section``;
+const WorkSection = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  padding: 40px;
+  padding-top: 120px;
+  text-align: center;
+`;

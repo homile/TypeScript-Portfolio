@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { skillActions } from '../../redux/reducers/skillReducer';
 
 const filter: string[] = ['Front-end', 'Back-end', 'Deploy', 'Etc'];
 
 const SkillFilter = () => {
-  const [select, setSelect] = useState('Front-end');
+  const dispatch = useDispatch();
+  const [select, setSelect] = useState(0);
+
+  const skillCheck = (idx: number) => {
+    setSelect(idx);
+    dispatch(skillActions.skillSelected({ skillSelected: idx }));
+  };
 
   return (
     <FilterContainer>
@@ -12,8 +20,8 @@ const SkillFilter = () => {
         return (
           <FilterButton
             key={idx}
-            selected={select === el}
-            onClick={() => setSelect(el)}
+            selected={select === idx}
+            onClick={() => skillCheck(idx)}
           >
             {el}
           </FilterButton>

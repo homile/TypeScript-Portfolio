@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface SelectInfo {
-  skillSelected: string;
+  skillSelected: number;
 }
 
 const initialState: SelectInfo = {
-  skillSelected: 'Front-end',
+  skillSelected: 0,
 };
 
 const skillReducer = createSlice({

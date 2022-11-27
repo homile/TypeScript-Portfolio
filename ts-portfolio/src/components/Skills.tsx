@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import SkillFilter from './button/SkillFilter';
+import SkillCard from './cards/SkillCard';
 import Title from './ui/Title';
 
 const Skills = () => {
   return (
     <SkillsSection>
       <Title title="Skills" />
+      <SkillFilter />
+      <SkillCard />
     </SkillsSection>
   );
 };

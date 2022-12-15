@@ -17,7 +17,7 @@ const projectsData: DataType[] = [
   {
     projectName: 'ANBD(아나바다)',
     devPeriod: '2022.09 ~ 2022.10',
-    img: '',
+    img: 'https://user-images.githubusercontent.com/56163157/207810195-2e45842c-7422-4751-b1f4-a37d93ba8a4a.gif',
     desc: '아나바다는 아껴쓰고 나눠쓰고 바꿔쓰고 다시쓰자의 줄임말이며 집에서 사용하지 않는 레저용품을 유저간 채팅을 통해 대여를 해주는 서비스입니다.',
     front: [
       'JavaScript',
@@ -39,13 +39,12 @@ const ProjectCard = () => {
   return (
     <CardContainer>
       {projectsData.map((el, idx: number) => {
-        console.log('dsadsadsa');
         return (
           <Card key={idx}>
             <ProjectName>{el.projectName}</ProjectName>
             <div className="project">
               <div className="left">
-                <Img></Img>
+                <Img src={el.img}></Img>
               </div>
               <div className="right">
                 <Contents>개발기간</Contents>
@@ -74,6 +73,12 @@ const CardContainer = styled.div`
   .right {
     display: flex;
     flex-direction: column;
+  }
+
+  .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

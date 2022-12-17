@@ -1,39 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-interface DataType {
-  projectName: string;
-  devPeriod: string;
-  img: string;
-  desc: string;
-  front: string[];
-  back: string[];
-  link: string;
-  code: string;
-  doc: string;
-}
-
-const projectsData: DataType[] = [
-  {
-    projectName: 'ANBD(아나바다)',
-    devPeriod: '2022.09 ~ 2022.10',
-    img: 'https://user-images.githubusercontent.com/56163157/207810195-2e45842c-7422-4751-b1f4-a37d93ba8a4a.gif',
-    desc: '아나바다는 아껴쓰고 나눠쓰고 바꿔쓰고 다시쓰자의 줄임말이며 집에서 사용하지 않는 레저용품을 유저간 채팅을 통해 대여를 해주는 서비스입니다.',
-    front: [
-      'JavaScript',
-      'React',
-      'Redux',
-      'StyledComponents',
-      'React Hook-form',
-      'Stomp',
-      'AWS',
-    ],
-    back: ['Java', 'Spring', 'JWT', 'MySQL', 'Stomp', 'AWS'],
-    link: 'https://d1chxyssw587bm.cloudfront.net/',
-    code: 'https://github.com/homile/seb39_main_054',
-    doc: 'https://www.notion.so/cho-min-woo/SEB_main_project-71fbbc3952ae4b0da540a0b2b84b1537',
-  },
-];
+import { projectsData } from '../../data/project-data';
 
 const ProjectCard = () => {
   return (
@@ -49,7 +16,7 @@ const ProjectCard = () => {
               <div className="right">
                 <Contents>
                   <SpanTitle>개발기간</SpanTitle>
-                  <SpanDesc>{el.devPeriod}</SpanDesc>
+                  <SpanSub>{el.devPeriod}</SpanSub>
                 </Contents>
                 <Contents>
                   <SpanTitle>설명</SpanTitle>
@@ -57,11 +24,11 @@ const ProjectCard = () => {
                 </Contents>
                 <Contents>
                   <SpanTitle>프론트엔드</SpanTitle>
-                  <SpanDesc>{el.front}</SpanDesc>
+                  <SpanSub>{el.front.join(', ')} </SpanSub>
                 </Contents>
                 <Contents>
                   <SpanTitle>백엔드</SpanTitle>
-                  <SpanDesc>{el.back}</SpanDesc>
+                  <SpanSub>{el.back.join(', ')}</SpanSub>
                 </Contents>
                 <Contents>
                   <SpanTitle>배포링크</SpanTitle>
@@ -90,6 +57,7 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   .right {
     display: flex;
@@ -110,6 +78,7 @@ const Card = styled.div`
   border: 1px solid black;
   border-radius: 10px;
   padding: 1.5rem;
+  margin-bottom: 4rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 `;
@@ -132,13 +101,27 @@ const Contents = styled.div`
 `;
 
 const SpanTitle = styled.span`
-  display: flex;
   font-weight: bold;
-  width: 100px;
+  text-align: left;
+  width: 6.25rem;
+  line-height: 1.4rem;
 `;
 
-const SpanDesc = styled.span``;
+const SpanDesc = styled.span`
+  text-align: left;
+  width: 23.125rem;
+  height: 9rem;
+  line-height: 1.4rem;
+`;
+
+const SpanSub = styled.span`
+  text-align: left;
+  width: 23.125rem;
+  line-height: 1.4rem;
+`;
 
 const ALink = styled.a`
-  color: ${(props) => props.theme.colorBlack}; ;
+  color: ${(props) => props.theme.colorBlack};
+  text-align: left;
+  width: 23.125rem;
 `;

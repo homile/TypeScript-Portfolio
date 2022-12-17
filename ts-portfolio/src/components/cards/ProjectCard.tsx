@@ -124,4 +124,5 @@ const ALink = styled.a`
   color: ${(props) => props.theme.colorBlack};
   text-align: left;
   width: 23.125rem;
+  line-height: 1.4rem;
 `;

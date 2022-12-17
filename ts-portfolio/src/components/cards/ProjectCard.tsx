@@ -112,6 +112,9 @@ const PreDesc = styled.pre`
   width: 23.125rem;
   height: 9rem;
   line-height: 1.4rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow: auto;
 `;
 
 const SpanSub = styled.span`

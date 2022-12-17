@@ -20,7 +20,7 @@ const ProjectCard = () => {
                 </Contents>
                 <Contents>
                   <SpanTitle>설명</SpanTitle>
-                  <SpanDesc>{el.desc}</SpanDesc>
+                  <PreDesc>{el.desc}</PreDesc>
                 </Contents>
                 <Contents>
                   <SpanTitle>프론트엔드</SpanTitle>
@@ -107,7 +107,7 @@ const SpanTitle = styled.span`
   line-height: 1.4rem;
 `;
 
-const SpanDesc = styled.span`
+const PreDesc = styled.pre`
   text-align: left;
   width: 23.125rem;
   height: 9rem;

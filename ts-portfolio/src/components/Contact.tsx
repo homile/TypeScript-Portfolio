@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import ContactCard from './cards/ContactCard';
 import Title from './ui/Title';
 
 const Contact = () => {
   return (
     <ContactSection>
       <Title title="Contact" />
+      <ContactCard />
     </ContactSection>
   );
 };

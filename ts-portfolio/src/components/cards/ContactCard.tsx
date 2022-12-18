@@ -89,7 +89,13 @@ const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  max-width: 300px;
   padding: 1rem;
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
 `;
 
 const H2 = styled.h2`

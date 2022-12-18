@@ -5,7 +5,7 @@ import Title from './ui/Title';
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <Title title="About Me" />
       <AboutCard />
     </AboutSection>

@@ -5,7 +5,7 @@ import SnsLink from './button/SnsLink';
 
 const Home = () => {
   return (
-    <HomeSection>
+    <HomeSection id="home">
       <LeftContainer>
         <Content>
           <h1>안녕하세요 프론트엔드 개발자 조민우입니다.</h1>

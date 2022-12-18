@@ -1,28 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false);
+
+  const onScroll = () => {
+    setIsScroll(window.scrollY || window.pageYOffset > 0 ? true : false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isScroll]);
+
   return (
     <NavbarStlye>
       <NavbarLogo>
-        <Link to="#">Minwoo</Link>
+        <a href="#home">Minwoo</a>
       </NavbarLogo>
       <UlNavbarMenu>
-        <li className="navbar_menu_item active" data-link="#home">
-          Home
+        <li className="navbar_menu_item active">
+          <a href="#home">Home</a>
         </li>
-        <li className="navbar_menu_item" data-link="#about">
-          About
+        <li className="navbar_menu_item">
+          <a href="#about">About</a>
         </li>
-        <li className="navbar_menu_item" data-link="#skills">
-          Skills
+        <li className="navbar_menu_item">
+          <a href="#skills">Skills</a>
         </li>
-        <li className="navbar_menu_item" data-link="#work">
-          Projects
+        <li className="navbar_menu_item">
+          <a href="#projects">Projects</a>
         </li>
-        <li className="navbar_menu_item" data-link="#contact">
-          Contact
+        <li className="navbar_menu_item">
+          <a href="#contact">Contact</a>
         </li>
       </UlNavbarMenu>
       {/* <!-- Toggle button--> */}

@@ -6,7 +6,7 @@ import Title from './ui/Title';
 
 const Skills = () => {
   return (
-    <SkillsSection>
+    <SkillsSection id="skills">
       <Title title="Skills" />
       <SkillFilter />
       <SkillCard />

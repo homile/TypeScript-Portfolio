@@ -5,7 +5,7 @@ import Title from './ui/Title';
 
 const Projects = () => {
   return (
-    <ProjectSection>
+    <ProjectSection id="projects">
       <Title title="Projects" />
       <ProjectCard />
     </ProjectSection>

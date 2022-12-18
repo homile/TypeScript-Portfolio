@@ -5,7 +5,7 @@ import Title from './ui/Title';
 
 const Contact = () => {
   return (
-    <ContactSection>
+    <ContactSection id="contact">
       <Title title="Contact" />
       <ContactCard />
     </ContactSection>

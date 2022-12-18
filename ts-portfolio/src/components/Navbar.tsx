@@ -1,18 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Navbar = () => {
-  const [isScroll, setIsScroll] = useState(false);
-
-  const onScroll = () => {
-    setIsScroll(window.scrollY || window.pageYOffset > 0 ? true : false);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [isScroll]);
-
   return (
     <NavbarStlye>
       <NavbarLogo>

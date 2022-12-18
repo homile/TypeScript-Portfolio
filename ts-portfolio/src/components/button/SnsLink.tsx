@@ -45,6 +45,7 @@ export default SnsLink;
 
 const Ul = styled.ul`
   display: flex;
+  justify-content: center;
 `;
 
 const Li = styled.li`
@@ -56,7 +57,6 @@ const Li = styled.li`
   padding-right: 0.625rem;
   margin-right: 8px;
   cursor: pointer;
-  border: 1px solid ${(props) => props.theme.colorDarkWhite};
   border-radius: ${(props) => props.theme.sizeBorderRadius};
 
   &:hover {

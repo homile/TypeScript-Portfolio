@@ -8,7 +8,7 @@ const Navbar = () => {
         <a href="#home">Minwoo</a>
       </NavbarLogo>
       <UlNavbarMenu>
-        <li className="navbar_menu_item active">
+        <li className="navbar_menu_item">
           <a href="#home">Home</a>
         </li>
         <li className="navbar_menu_item">
@@ -56,16 +56,18 @@ const UlNavbarMenu = styled.div`
   display: flex;
 
   .navbar_menu_item {
+    width: 100%;
+  }
+
+  a {
+    display: block;
     padding: 8px 12px;
     margin: 0 4px;
+    background: none;
     /* 클릭할 수 있는 항목이라는 것을 알려주기 위함 */
     cursor: pointer;
     border: 1px solid ${(props) => props.theme.colorMain};
     border-radius: ${(props) => props.theme.sizeBorderRadius};
-
-    &:active {
-      border: 1px solid ${(props) => props.theme.colorWhite};
-    }
 
     &:hover {
       border-color: ${(props) => props.theme.colorWhite};

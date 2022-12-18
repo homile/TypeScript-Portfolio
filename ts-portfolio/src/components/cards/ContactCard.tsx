@@ -32,36 +32,36 @@ const ContactCard = () => {
 
   return (
     <CardContainer>
-      <div>
-        <h2>조 민 우</h2>
-        <span>alsalsdyd@gmail.com</span>
+      <LeftContainer>
+        <H2>조 민 우</H2>
+        <Span>alsalsdyd@gmail.com</Span>
         <SnsLink />
-      </div>
-      <div>
-        <form ref={form} onSubmit={submitHandler}>
-          <label htmlFor="name">Name</label>
-          <input
+      </LeftContainer>
+      <RightContainer>
+        <Form ref={form} onSubmit={submitHandler}>
+          <Label htmlFor="name">Name</Label>
+          <Input
             id="name"
             name="name"
             type="text"
             placeholder="이름을 입력해주세요"
           />
-          <label htmlFor="email">Email</label>
-          <input
+          <Label htmlFor="email">Email</Label>
+          <Input
             id="email"
             name="email"
             type="email"
             placeholder="이메일을 입력해주세요"
           />
-          <label htmlFor="message">Message</label>
-          <textarea
+          <Label htmlFor="message">Message</Label>
+          <TextArea
             id="message"
             name="message"
             placeholder="내용을 입력해주세요"
           />
-          <input type="submit" value="전송" />
-        </form>
-      </div>
+          <SubmitButton type="submit" value="전 송" />
+        </Form>
+      </RightContainer>
     </CardContainer>
   );
 };
@@ -73,7 +73,77 @@ const CardContainer = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 800px;
-  height: 500px;
+  height: 100%;
+  min-height: 500px;
   margin: 1rem 0;
-  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: ${(props) => props.theme.colorMain};
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+`;
+
+const LeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+`;
+
+const H2 = styled.h2`
+  color: ${(props) => props.theme.colorWhite};
+  height: 3rem;
+`;
+
+const Span = styled.span`
+  color: ${(props) => props.theme.colorWhite};
+  height: 3rem;
+`;
+
+const RightContainer = styled.div`
+  width: 100%;
+  border-radius: 10px;
+  background: ${(props) => props.theme.colorWhite};
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+`;
+
+const Label = styled.label`
+  font-weight: ${(props) => props.theme.weightBold};
+  margin-bottom: 0.3rem;
+`;
+
+const Input = styled.input`
+  height: 2.25em;
+  border: none;
+  border-bottom: 2px solid ${(props) => props.theme.colorBlack};
+  resize: none;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+`;
+
+const TextArea = styled.textarea`
+  height: 15em;
+  border: none;
+  border-bottom: 2px solid ${(props) => props.theme.colorBlack};
+  resize: none;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+`;
+
+const SubmitButton = styled.input`
+  font-weight: ${(props) => props.theme.weightBold};
+  color: ${(props) => props.theme.colorWhite};
+  background: ${(props) => props.theme.colorMain};
+  border: 0px;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: ${(props) => props.theme.fontSmall};
 `;

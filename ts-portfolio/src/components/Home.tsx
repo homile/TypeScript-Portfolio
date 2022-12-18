@@ -67,7 +67,6 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 31.25rem;
 `;
 
 const Desc = styled.p`

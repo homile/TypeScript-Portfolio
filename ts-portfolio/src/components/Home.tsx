@@ -51,7 +51,7 @@ const HomeSection = styled.section`
   justify-content: center;
   width: 100vw;
   height: 100%;
-  padding: 40px;
+  padding: 20px;
   padding-top: 120px;
   text-align: center;
 `;
@@ -79,6 +79,10 @@ const RightContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 2rem;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const ProfileImg = styled.img`

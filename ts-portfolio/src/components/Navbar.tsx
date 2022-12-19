@@ -1,33 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Navbar = () => {
+  const LinkData = ['home', 'about', 'skills', 'projects', 'contact'];
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <NavbarStlye>
       <NavbarLogo>
         <a href="#home">Minwoo</a>
       </NavbarLogo>
       <UlNavbarMenu>
-        <li className="navbar_menu_item">
-          <a href="#home">Home</a>
-        </li>
-        <li className="navbar_menu_item">
-          <a href="#about">About</a>
-        </li>
-        <li className="navbar_menu_item">
-          <a href="#skills">Skills</a>
-        </li>
-        <li className="navbar_menu_item">
-          <a href="#projects">Projects</a>
-        </li>
-        <li className="navbar_menu_item">
-          <a href="#contact">Contact</a>
-        </li>
+        {LinkData.map((el, idx) => {
+          return (
+            <li key={idx} className="navbar_menu_item">
+              <a href={`#${el}`}>{el}</a>
+            </li>
+          );
+        })}
       </UlNavbarMenu>
       {/* <!-- Toggle button--> */}
-      <Button>
+      <Menu
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
         <i className="fa-solid fa-bars"></i>
-      </Button>
+      </Menu>
     </NavbarStlye>
   );
 };
@@ -61,10 +61,8 @@ const UlNavbarMenu = styled.div`
 
   a {
     display: block;
-    padding: 8px 12px;
+    padding: 6px 12px;
     margin: 0 4px;
-    background: none;
-    /* 클릭할 수 있는 항목이라는 것을 알려주기 위함 */
     cursor: pointer;
     border: 1px solid ${(props) => props.theme.colorMain};
     border-radius: ${(props) => props.theme.sizeBorderRadius};
@@ -74,14 +72,20 @@ const UlNavbarMenu = styled.div`
       background-color: ${(props) => props.theme.colorBlue};
     }
   }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
-const Button = styled.button`
+const Menu = styled.div`
   /* 투명도만 적용하면 클릭이 됨 */
   display: none;
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  font-size: 24px;
-  color: ${(props) => props.theme.colorWhite};
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    font-size: 24px;
+    color: ${(props) => props.theme.colorWhite};
+    cursor: pointer;
+  }
 `;

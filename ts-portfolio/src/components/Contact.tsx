@@ -21,7 +21,6 @@ const ContactSection = styled.section`
   align-items: center;
   width: 100vw;
   height: 100%;
-  padding: 40px;
-  padding-top: 120px;
+  padding: 120px 40px;
   text-align: center;
 `;

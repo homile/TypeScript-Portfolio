@@ -37,8 +37,13 @@ const FilterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 532px;
+  width: 100%;
   margin: 60px 0;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    margin: 20px 0;
+  }
 `;
 
 const FilterButton = styled.button<{ selected: boolean }>`
@@ -55,5 +60,9 @@ const FilterButton = styled.button<{ selected: boolean }>`
   &:hover {
     color: ${(props) => props.theme.colorWhite};
     background: ${(props) => props.theme.colorLightBlue};
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 10px 10px;
   }
 `;

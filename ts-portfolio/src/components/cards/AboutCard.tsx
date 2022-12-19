@@ -117,6 +117,10 @@ const ImgDiv = styled.div`
   justify-content: center;
   width: 170px;
   margin: 0 2rem;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const EduImg = styled.img`
@@ -147,6 +151,7 @@ const Li = styled.li`
   list-style-position: inside;
   font-size: ${(props) => props.theme.fontSmall};
   margin: 0.2rem 0;
+  line-height: 1.2rem;
   text-indent: -20px;
   padding-left: 20px;
 `;

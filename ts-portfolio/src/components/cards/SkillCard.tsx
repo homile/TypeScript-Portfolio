@@ -64,8 +64,13 @@ const Card = styled.div`
   margin: 1rem;
   transition: all 0.3s linear;
 
-  &:hover{
+  &:hover {
     transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 80px;
+    height: 80px;
   }
 `;
 
@@ -73,4 +78,9 @@ const CardImg = styled.img`
   width: 100px;
   height: 100px;
   object-fit: contain;
+
+  @media screen and (max-width: 767px) {
+    width: 80px;
+    height: 80px;
+  }
 `;

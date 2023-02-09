@@ -76,7 +76,7 @@ const AboutCard = () => {
                 <AboutTitle>{el.title}</AboutTitle>
                 <Date>{el.date}</Date>
                 <ul>
-                  {el.desc.map((desc) => {
+                  {el.desc.map((desc, idx) => {
                     return <Li key={idx}>{desc}</Li>;
                   })}
                 </ul>

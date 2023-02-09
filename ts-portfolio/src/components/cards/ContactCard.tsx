@@ -1,14 +1,39 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import SnsLink from '../button/SnsLink';
 import emailjs from '@emailjs/browser';
 
+interface contactInpusType {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const ContactCard = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [contactInputs, setContactInputs] = useState<contactInpusType>({
+    name: '',
+    email: '',
+    message: '',
+  });
 
   // 이메일 전송
   const submitHandler = async (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const { name, email, message } = contactInputs;
+
+    if (name === '') {
+      return alert('이름을 작성해주세요');
+    }
+
+    if (email === '') {
+      return alert('이메일을 작성해주세요');
+    }
+
+    if (message === '') {
+      return alert('내용을 작성해주세요');
+    }
 
     if (form.current) {
       emailjs
@@ -44,6 +69,12 @@ const ContactCard = () => {
             id="name"
             name="name"
             type="text"
+            onChange={(el) =>
+              setContactInputs({
+                ...contactInputs,
+                name: el.currentTarget.value,
+              })
+            }
             placeholder="이름을 입력해주세요"
           />
           <Label htmlFor="email">Email</Label>
@@ -51,12 +82,24 @@ const ContactCard = () => {
             id="email"
             name="email"
             type="email"
+            onChange={(el) =>
+              setContactInputs({
+                ...contactInputs,
+                email: el.currentTarget.value,
+              })
+            }
             placeholder="이메일을 입력해주세요"
           />
           <Label htmlFor="message">Message</Label>
           <TextArea
             id="message"
             name="message"
+            onChange={(el) =>
+              setContactInputs({
+                ...contactInputs,
+                message: el.currentTarget.value,
+              })
+            }
             placeholder="내용을 입력해주세요"
           />
           <SubmitButton type="submit" value="전 송" />
